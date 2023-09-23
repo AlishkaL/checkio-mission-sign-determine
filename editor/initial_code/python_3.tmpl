@@ -1,0 +1,24 @@
+{% comment %}New initial code template{% endcomment %}
+{% block env %}{% endblock env %}
+
+{% block start %}
+def determine_sign(num: int) -> str:
+    # your code here
+    return ""
+{% endblock start %}
+
+{% block example %}
+print('Example:')
+print(determine_sign(11))
+{% endblock %}
+
+# These "asserts" are used for self-checking
+{% block tests %}
+{% for t in tests %}
+assert {% block call %}determine_sign({{t.input|p_args}})
+{% endblock %} == {% block result %}{{t.answer|p}}{% endblock %}{% endfor %}
+{% endblock %}
+
+{% block final %}
+print("The mission is done! Click 'Check Solution' to earn rewards!")
+{% endblock final %}
