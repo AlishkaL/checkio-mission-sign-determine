@@ -1,0 +1,41 @@
+<!-- Describe task in general -->
+
+<p>
+    Déterminez si un nombre entier donné est positif, négatif ou nul et renvoyez la chaîne correspondante: <code>"positive"</code>, <code>"negative"</code> ou <code>"zero"</code>. 
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}sign-determine.png" alt="example" style="max-height: 200px"/>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Entrée:</strong> Entier <span>({% if is_js %}number{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Sortie:</strong> Chaîne <span>(str{% if is_js %}ing{% endif %})</span>. 
+</p>
+
+<p>
+    <strong>Exemples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+
+    <strong>Comment c'est utilisé:</strong>
+    <i>comprendre le signe d'un nombre peut être utile dans les logiciels financiers, les simulations scientifiques et de nombreux algorithmes pour déterminer la logique qui s'ensuit.</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Condition préalable:</strong>
+    <ul>
+    <li><i>num ∈ Z</i>.</li>
+    </ul>
+</p>
