@@ -1,0 +1,41 @@
+<!-- Describe task in general -->
+
+<p>
+    Визначити, чи є задане ціле число додатнім, від'ємним або нульовим і повернути відповідний рядок: <code>"positive"</code>, <code>"negative"</code> або <code>"zero"</code>. 
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}sign-determine.png" alt="example" style="max-height: 200px"/>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Вхідні дані:</strong> Ціле число <span>({% if is_js %}number{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Вихідні дані:</strong> Рядок <span>(str{% if is_js %}ing{% endif %})</span>. 
+</p>
+
+<p>
+    <strong>Приклади:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+
+    <strong>Як використовується:</strong>
+    <i>розуміння знаку числа може бути корисним у фінансовому програмному забезпеченні, наукових симуляціях та багатьох алгоритмах для визначення подальшої логіки.</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Умова:</strong>
+    <ul>
+    <li><i>num ∈ Z</i>.</li>
+    </ul>
+</p>
