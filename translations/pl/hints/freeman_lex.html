@@ -1,0 +1,157 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        Nie mam pojęcia, jak zacząć rozwiązywać tę misję.
+    </div>
+    <div class="answer">
+        <p>
+            Proszę wpaść na jakiś pomysł 💡! Proszę użyć wyrażenia warunkowego <b class="code">if/elif/else</b>, aby sprawdzić wszystkie warianty i zwrócić prawidłowy wynik w każdym przypadku.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ok, od czego powinienem zacząć?
+    </div>
+    <div class="answer">
+        <p>
+            Istnieją trzy możliwe warianty, więc zbudujmy całe wyrażenie <a target="_blank" href="https://www.w3schools.com/python/gloss_python_else.asp">if/elif/else</a> jako ramkę.
+        </p>
+        <pre class="brush: python">
+if ...:
+    ...
+elif ...:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Co robić dalej?
+    </div>
+    <div class="answer">
+        <p>
+            Właściwie nie ma to znaczenia, ale niech pierwszym przypadkiem będzie <b class="code">num> 0</b>. Oczywiście w tym przypadku musi Pan zwrócić <b class="code">"positive"</b>.  
+        </p>
+        <pre class="brush: python">
+if num> 0:
+    return "positive"
+elif ...:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Nadal potrzebuję podpowiedzi.
+    </div>
+    <div class="answer">
+        <p>
+            Proszę użyć tej samej logiki, aby utworzyć drugi przypadek (<b class="code">num < 0</b>) dla liczb ujemnych (<b class="code">"negative"</b>).
+        </p>
+        <pre class="brush: python">
+if num> 0:
+    return "positive"
+elif num < 0:
+    return "negative"
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Jak zakończyć wyrażenie?
+    </div>
+    <div class="answer">
+        <p>
+            Pozostaje tylko przypadek, gdy <b class="code">num == 0</b>. Musi Pan zwrócić <b class="code">"zero"</b>. 
+        </p>
+        <pre class="brush: python">
+if num> 0:
+    return "positive"
+elif num < 0:
+    return "negative"
+else:
+    return "zero"
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Jak więc powinno wyglądać moje ostateczne rozwiązanie?
+    </div>
+    <div class="answer">
+        <p>
+            Proszę po prostu opakować swój kod w wyrażenie funkcyjne. Używanie podpowiedzi typu dla danych wejściowych i wyjściowych jest wysoce zalecane.
+        </p>
+        <p>Oto całe rozwiązanie:</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def determine_sign(num: int) -> str:
+
+    if num> 0:
+        return "positive"
+    elif num < 0:
+        return "negative"
+    else:
+        return "zero"
+        </pre>
+        </div>
+        <p>
+            Ponieważ użycie <b class="code">return</b> kończy wykonywanie, nie potrzebują Państwo rozgałęzień warunkowych i mogą uprościć kod. W przypadku krótkich warunków można napisać wyrażenie w jednej linii.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def determine_sign(num: int) -> str:
+
+    if num> 0: return "positive"
+    if num < 0: return "negative"
+    return "zero"
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Proszę pokazać mi więcej rozwiązań!<br />
+        bo chcę być prawdziwym 🥇 Python Ninnjaa!
+    </div>
+    <div class="answer">
+        <p>Jasne, proszę łapać!</p>
+        <p>
+            Proszę użyć zagnieżdżonego operatora trójargumentowego.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def determine_sign(num: int) -> str:
+
+    return "positive" if num> 0 else ("negative" if num < 0 else "zero")
+        </pre>
+        </div>
+        <p>
+            To rozwiązanie jest nieco skomplikowane. Wyrażenie daje różne wartości (0, 1, -1). Proszę użyć go jako indeksu listy i uzyskać właściwe słowo.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def determine_sign(num: int) -> str:
+
+    return ["zero", "positive", "negative"][(num> 0) - (num < 0)]
+        </pre>
+        </div>
+        <p>Proszę kliknąć <b>Best Solutions</b> w menu misji i zobaczyć wiele innych ciekawych rozwiązań!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa jak należy!
+    </div>
+    <div class="answer">
+        Miło mi to słyszeć 👍!
+    </div>
+</div>
+</body>
