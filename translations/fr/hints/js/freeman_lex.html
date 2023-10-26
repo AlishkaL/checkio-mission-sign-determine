@@ -1,0 +1,161 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        Je n'ai aucune idée de la manière de commencer à résoudre cette mission.
+    </div>
+    <div class="answer">
+        <p>
+            Trouvez une idée 💡! Utilisez l'expression conditionnelle <b class="code">if/else if/else</b> pour vérifier toutes les variantes et renvoyer une sortie correcte dans tous les cas.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ok, par quoi dois-je commencer?
+    </div>
+    <div class="answer">
+        <p>
+            Il y a trois variantes possibles, alors construisons l'ensemble de l'expression de <a target="_blank" href="https://www.w3schools.com/js/js_if_else.asp">if/else if/else</a> comme un cadre.
+        </p>
+        <pre class="brush: javascript">
+if (...)
+    ...;
+else if (...)
+    ...;
+else
+    ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Que faire ensuite?
+    </div>
+    <div class="answer">
+        <p>
+            Cela n'a pas vraiment d'importance, mais supposons que le premier cas soit <b class="code">num> 0</b>. Il est évident que dans ce cas, vous devez renvoyer <b class="code">"positive"</b>.  
+        </p>
+        <pre class="brush: javascript">
+if (num> 0)
+    return "positive";
+else if (...)
+    ...;
+else
+    ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        J'ai encore besoin d'un indice.
+    </div>
+    <div class="answer">
+        <p>
+            Utilisez la même logique pour créer le deuxième cas (<b class="code">num < 0</b>) pour les nombres négatifs (<b class="code">"negative"</b>).
+        </p>
+        <pre class="brush: javascript">
+if (num> 0)
+    return "positive";
+else if (num < 0)
+    return "negative";
+else
+    ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Comment terminer l'expression?
+    </div>
+    <div class="answer">
+        <p>
+            Il ne reste plus que le cas où <b class="code">num == 0</b>. Vous devez renvoyer <b class="code">"zero"</b>. 
+        </p>
+        <pre class="brush: javascript">
+if (num> 0)
+    return "positive";
+else if (num < 0)
+    return "negative";
+else
+    return "zero";
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Alors, à quoi devrait ressembler ma solution finale?
+    </div>
+    <div class="answer">
+        <p>
+            Il vous suffit d'envelopper votre code dans une expression de fonction. Il est fortement recommandé d'utiliser des indications de type pour les données d'entrée et de sortie.
+        </p>
+        <p>Voici la solution complète:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function determineSign(num: number): string {
+
+    if (num> 0)
+        return "positive";
+    else if (num < 0)
+        return "negative";
+    else
+        return "zero";
+}
+        </pre>
+        </div>
+        <p>
+            Puisque l'utilisation de <b class="code">return</b> met fin à l'exécution, vous n'avez pas besoin de branchements conditionnels et vous pouvez simplifier le code. Pour les conditions courtes, vous pouvez écrire l'expression en une seule ligne.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function determineSign(num: number): string {
+
+    if (num> 0) return "positive";
+    if (num < 0) return "negative";
+    return "zero";
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Montrez-moi d'autres solutions!<br />
+        parce que je veux être un vrai 🥇 Javascript Hero!
+    </div>
+    <div class="answer">
+        <p>Bien sûr, prenez-le!</p>
+        <p>
+            Utilisez l'opérateur ternaire imbriqué.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function determineSign(num: number): string {
+
+    return num> 0? "positive": (num < 0? "negative": "zero");
+}
+        </pre>
+        </div>
+        <p>
+            L'expression donne des valeurs différentes (0, 1, 2). Utilisez-les comme index du tableau et obtenez le bon mot.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function determineSign(num: number): string {
+
+    return ["negative", "zero", "positive"][(Math.sign(num)) + 1];
+}
+        </pre>
+        </div>
+        <p>Cliquez sur <b>Best Solutions</b> dans le menu mission et découvrez de nombreuses autres solutions intéressantes!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Merci beaucoup! Je sais et je comprends mieux maintenant! Tout fonctionne bien!
+    </div>
+    <div class="answer">
+        Heureux de l'apprendre 👍!
+    </div>
+</div>
+</body>
