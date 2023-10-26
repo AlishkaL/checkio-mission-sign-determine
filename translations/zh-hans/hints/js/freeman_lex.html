@@ -1,0 +1,161 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        我不知道如何开始解决这个任务。
+    </div>
+    <div class="answer">
+        <p>
+            抓住一个点子💡！使用条件表达式<b class="code">if/else if/else</b> 检查所有变量，并在每种情况下返回适当的输出。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        好吧，我应该从什么开始呢？
+    </div>
+    <div class="answer">
+        <p>
+            有三种可能的变体，让我们把<a target="_blank" href="https://www.w3schools.com/js/js_if_else.asp">if/else if/else</a> 作为一个框架来构建整个表达。
+        </p>
+        <pre class="brush: javascript">
+if (...)
+    ...;
+else if (...)
+    ...;
+else
+    ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        接下来要做什么？
+    </div>
+    <div class="answer">
+        <p>
+            其实这并不重要，让第一种情况成为<b class="code">num> 0</b> 。显然，在这种情况下，您需要返回<b class="code">"positive"</b> 。  
+        </p>
+        <pre class="brush: javascript">
+if (num> 0)
+    return "positive";
+else if (...)
+    ...;
+else
+    ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        我仍然需要一个提示。
+    </div>
+    <div class="answer">
+        <p>
+            用同样的逻辑把第二个情况 (<b class="code">num < 0</b>) 变成负数 (<b class="code">"negative"</b>)。
+        </p>
+        <pre class="brush: javascript">
+if (num> 0)
+    return "positive";
+else if (num < 0)
+    return "negative";
+else
+    ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        如何完成表达式？
+    </div>
+    <div class="answer">
+        <p>
+            唯一剩下的情况是当<b class="code">num == 0</b>.您需要返回<b class="code">"zero"</b> 。 
+        </p>
+        <pre class="brush: javascript">
+if (num> 0)
+    return "positive";
+else if (num < 0)
+    return "negative";
+else
+    return "zero";
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        那么，我的最终解决方案应该是怎样的呢？
+    </div>
+    <div class="answer">
+        <p>
+            你只需将代码封装成函数表达式。强烈建议对输入和输出数据使用类型提示。
+        </p>
+        <p>以下是整个解决方案：</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function determineSign(num: number): string {
+
+    if (num> 0)
+        return "positive";
+    else if (num < 0)
+        return "negative";
+    else
+        return "zero";
+}
+        </pre>
+        </div>
+        <p>
+            由于使用<b class="code">return</b> 可以结束执行，因此不需要条件分支，还可以简化代码。对于简短的条件，可以在一行中编写表达式。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function determineSign(num: number): string {
+
+    if (num> 0) return "positive";
+    if (num < 0) return "negative";
+    return "zero";
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        告诉我更多解决方案！<br />
+        因为我想成为真正的 🥇 Javascript 英雄！
+    </div>
+    <div class="answer">
+        <p>当然，抓住它！</p>
+        <p>
+            使用嵌套三元运算符。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function determineSign(num: number): string {
+
+    return num> 0? "positive": (num < 0? "negative": "zero");
+}
+        </pre>
+        </div>
+        <p>
+            表达式给出了不同的值（0、1、2）。将其作为数组的索引，即可得到正确的单词。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function determineSign(num: number): string {
+
+    return ["negative", "zero", "positive"][(Math.sign(num)) + 1];
+}
+        </pre>
+        </div>
+        <p>点击任务菜单<b>Best Solutions</b> ，查看更多有趣的解决方案！</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        谢谢！我现在知道并理解得更多了！一切正常！
+    </div>
+    <div class="answer">
+        很高兴听到这个消息 👍！
+    </div>
+</div>
+</body>
