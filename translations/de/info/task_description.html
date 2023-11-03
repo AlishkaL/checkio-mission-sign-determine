@@ -1,0 +1,41 @@
+<!-- Describe task in general -->
+
+<p>
+    Erkennt, ob eine gegebene ganze Zahl positiv, negativ oder Null ist und gibt eine entsprechende Zeichenkette zurück: <code>"positive"</code>, <code>"negative"</code> oder <code>"zero"</code>. 
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}sign-determine.png" alt="example" style="max-height: 200px"/>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Eingabe:</strong> Ganzzahl <span>({% if is_js %}number{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> String <span>(str{% if is_js %}ing{% endif %})</span>. 
+</p>
+
+<p>
+    <strong>Beispiele:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+
+    <strong>Wie es verwendet wird:</strong>
+    <i>das Verständnis des Vorzeichens einer Zahl kann in Finanzsoftware, wissenschaftlichen Simulationen und vielen Algorithmen nützlich sein, um die nachfolgende Logik zu bestimmen.</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Vorbedingung:</strong>
+    <ul>
+    <li><i>num ∈ Z</i>.</li>
+    </ul>
+</p>
